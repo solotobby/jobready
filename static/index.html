@@ -1,0 +1,2187 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>JobReady — AI Studio Headshots & ATS-Tailored CVs That Get You Hired</title>
+  <meta name="description" content="Why pay $35+ for just headshots? Get 40 studio-grade AI headshots PLUS an ATS-tailored resume rewritten for your dream job in 2 minutes for just $9.99.">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            violet: {
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+            },
+            mint: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+            }
+          },
+          boxShadow: {
+            'gradient-glow': '0 10px 40px -10px rgba(37, 99, 235, 0.25)',
+            'card-lift': '0 10px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.03)',
+            'subtle-card': '0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .glass-header {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .mesh-gradient-bg {
+      background: 
+        radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.7) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(237, 233, 254, 0.6) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(220, 252, 231, 0.5) 0px, transparent 50%);
+    }
+
+    .gradient-hero-title {
+      background: linear-gradient(135deg, #0F172A 0%, #1E40AF 45%, #7C3AED 75%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-badge {
+      background: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #059669 100%);
+    }
+
+    @media print {
+      .noprint, nav, footer, #pricing, #hero-section, #how-it-works, #results-proof, #faq, #comparison, #auth-modal { display: none !important; }
+      body { background: white !important; color: black !important; }
+      .cv-paper { box-shadow: none !important; border: none !important; color: black !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-brand-600 selection:text-white bg-slate-50">
+
+  <!-- ================= TOP NOTIFICATION BAR ================= -->
+  <div class="bg-gradient-to-r from-brand-700 via-violet-700 to-mint-700 text-white text-[11px] sm:text-xs font-bold py-2 px-4 text-center flex items-center justify-center gap-2">
+    <span class="bg-white/20 px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider">Market Disruption</span>
+    <span>Why pay $35+ for headshots only? Get 40 Headshots + ATS Tailored CV for <b>$9.99</b> (Save $25)</span>
+    <a href="#comparison" class="underline hover:text-amber-200 ml-1 hidden sm:inline">See Comparison →</a>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 glass-header border-b border-slate-200/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Brand Logo -->
+        <a href="javascript:showView('landing')" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl gradient-badge p-0.5 shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+            <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
+              <i data-lucide="sparkles" class="w-5 h-5 text-brand-600"></i>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900">JobReady</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-blue-50 text-brand-700 font-bold border border-blue-200">Pack</span>
+            </div>
+            <span class="text-[10px] text-slate-500 font-semibold tracking-wider uppercase -mt-0.5">Headshots + ATS CV</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600" id="desktop-nav-links">
+          <a href="#how-it-works" onclick="showView('landing')" class="hover:text-brand-600 transition-colors">How It Works</a>
+          <a href="#photo-roaster" onclick="showView('landing')" class="hover:text-brand-600 transition-colors flex items-center gap-1">
+            <i data-lucide="flame" class="w-3.5 h-3.5 text-amber-500"></i>
+            <span>Photo Grader</span>
+          </a>
+          <a href="#comparison" onclick="showView('landing')" class="hover:text-brand-600 transition-colors">vs Competitors</a>
+          <a href="#pricing" onclick="showView('landing')" class="hover:text-brand-600 transition-colors">Pricing</a>
+          <a href="#faq" onclick="showView('landing')" class="hover:text-brand-600 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Auth & CTA Actions -->
+        <div class="hidden md:flex items-center gap-3">
+          
+          <!-- Logged Out State -->
+          <div id="nav-logged-out" class="flex items-center gap-3">
+            <button onclick="openAuthModal('login')" class="text-xs font-bold text-slate-700 hover:text-brand-600 px-3.5 py-2 rounded-xl hover:bg-slate-100 transition flex items-center gap-1.5">
+              <i data-lucide="user" class="w-4 h-4"></i> Sign In
+            </button>
+            <button onclick="selectPlanAndScroll('starter')" class="relative group rounded-xl font-bold text-sm shadow-md shadow-brand-600/20 hover:shadow-lg hover:shadow-brand-600/30 transition transform active:scale-95">
+              <span class="block px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 via-brand-700 to-mint-600 hover:opacity-95 text-white transition-all flex items-center gap-2">
+                <span>Get Started ($9.99)</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+              </span>
+            </button>
+          </div>
+
+          <!-- Logged In State -->
+          <div id="nav-logged-in" class="hidden flex items-center gap-3">
+            <button onclick="showView('dashboard')" class="px-3.5 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-brand-700 font-bold text-xs flex items-center gap-2 transition border border-blue-200">
+              <i data-lucide="layout-dashboard" class="w-4 h-4 text-brand-600"></i>
+              <span>My Dashboard</span>
+            </button>
+            <div class="flex items-center gap-2 pl-2 border-l border-slate-200">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-brand-600 to-mint-500 text-white font-bold text-xs flex items-center justify-center shadow-xs" id="user-avatar-initials">
+                U
+              </div>
+              <button onclick="handleLogout()" class="text-xs font-semibold text-slate-500 hover:text-red-600 p-1.5 rounded-lg hover:bg-slate-100 transition" title="Sign Out">
+                <i data-lucide="log-out" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center gap-2 md:hidden">
+          <button id="mobile-auth-btn" onclick="openAuthModal('login')" class="px-2.5 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-bold">
+            Sign In
+          </button>
+          <button onclick="selectPlanAndScroll('starter')" class="px-3 py-1.5 rounded-lg bg-brand-600 text-white text-xs font-bold shadow-xs">
+            $9.99 Pack
+          </button>
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition focus:outline-none" aria-label="Toggle navigation menu">
+            <i data-lucide="menu" id="menu-icon-open" class="w-5 h-5"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-5 h-5 hidden"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white/98 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 shadow-xl transition-all">
+      <div class="grid grid-cols-2 gap-2 pt-1">
+        <a href="#how-it-works" onclick="showView('landing');closeMobileMenu()" class="flex items-center gap-2 p-3 rounded-xl bg-blue-50/70 border border-blue-100 text-brand-800 text-xs font-bold">
+          <i data-lucide="workflow" class="w-4 h-4 text-brand-600"></i>
+          <span>How It Works</span>
+        </a>
+        <a href="#photo-roaster" onclick="showView('landing');closeMobileMenu()" class="flex items-center gap-2 p-3 rounded-xl bg-amber-50/70 border border-amber-100 text-amber-900 text-xs font-bold">
+          <i data-lucide="flame" class="w-4 h-4 text-amber-600"></i>
+          <span>Photo Grader</span>
+        </a>
+        <button onclick="showView('dashboard');closeMobileMenu()" class="flex items-center gap-2 p-3 rounded-xl bg-mint-50/70 border border-mint-100 text-mint-900 text-xs font-bold text-left">
+          <i data-lucide="layout-dashboard" class="w-4 h-4 text-mint-600"></i>
+          <span>My Dashboard</span>
+        </button>
+        <a href="#pricing" onclick="showView('landing');closeMobileMenu()" class="flex items-center gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs font-bold">
+          <i data-lucide="tag" class="w-4 h-4 text-brand-600"></i>
+          <span>Pricing ($9.99)</span>
+        </a>
+      </div>
+
+      <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="openAuthModal('login');closeMobileMenu()" class="w-full py-2.5 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs text-center">
+          Sign In / Create Account
+        </button>
+        <button onclick="selectPlanAndScroll('starter');closeMobileMenu()" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-600 via-violet-600 to-mint-600 text-white font-extrabold text-sm text-center shadow-md shadow-brand-600/20">
+          Build Your Job-Ready Pack ($9.99) →
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= AUTH MODAL (SIGN IN / SIGN UP / FORGOT / RESET) ================= -->
+  <div id="auth-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full border border-slate-200 shadow-2xl relative transform transition-all">
+      
+      <!-- Close button -->
+      <button onclick="closeAuthModal()" class="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Contextual Prompt Banner -->
+      <div id="auth-modal-prompt" class="hidden mb-5 p-3.5 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 text-xs text-brand-900 font-semibold flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-brand-600 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+          <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+        </div>
+        <span id="auth-modal-prompt-text">Please sign in to proceed with your Job-Ready Pack.</span>
+      </div>
+
+      <!-- Auth Tabs (visible in login/signup mode) -->
+      <div id="auth-tabs-container" class="flex border-b border-slate-200 mb-6">
+        <button onclick="switchAuthTab('login')" id="auth-tab-login" class="flex-1 pb-3 font-extrabold text-sm text-brand-600 border-b-2 border-brand-600 text-center">
+          Sign In
+        </button>
+        <button onclick="switchAuthTab('signup')" id="auth-tab-signup" class="flex-1 pb-3 font-extrabold text-sm text-slate-400 hover:text-slate-600 border-b-2 border-transparent text-center">
+          Create Account
+        </button>
+      </div>
+
+      <!-- 1. LOGIN & SIGNUP FORM -->
+      <form id="auth-form" onsubmit="handleAuthSubmit(event)" class="space-y-4">
+        
+        <div id="auth-name-field" class="hidden">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Full Name</label>
+          <input type="text" id="auth-name-input" placeholder="Jordan Davies" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 outline-none transition">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Email Address</label>
+          <input type="email" id="auth-email-input" required placeholder="alex@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 outline-none transition">
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1.5">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">Password</label>
+            <button type="button" id="auth-forgot-link" onclick="switchAuthTab('forgot')" class="text-xs text-brand-600 hover:text-brand-700 font-semibold">
+              Forgot password?
+            </button>
+          </div>
+          <input type="password" id="auth-password-input" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 outline-none transition">
+        </div>
+
+        <!-- Error Msg -->
+        <div id="auth-error-box" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 font-medium flex items-center gap-1.5">
+          <i data-lucide="alert-circle" class="w-4 h-4 text-red-600 flex-shrink-0"></i>
+          <span id="auth-error-msg"></span>
+        </div>
+
+        <button type="submit" id="auth-submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 via-brand-700 to-mint-600 text-white font-extrabold text-sm shadow-md shadow-brand-600/20 hover:opacity-95 transition">
+          <span id="auth-submit-label">Sign In to Dashboard</span>
+        </button>
+
+        <div class="pt-2 text-center">
+          <button type="button" onclick="fillDemoAccount()" class="text-xs text-slate-500 hover:text-brand-600 font-semibold">
+            ⚡ Click here to auto-fill demo account
+          </button>
+        </div>
+
+      </form>
+
+      <!-- 2. FORGOT PASSWORD FORM -->
+      <div id="forgot-password-view" class="hidden space-y-4">
+        <div class="text-center mb-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 mx-auto flex items-center justify-center mb-2 border border-amber-200">
+            <i data-lucide="key-round" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Reset Your Password</h3>
+          <p class="text-xs text-slate-500 mt-1">Enter your account email and we'll send you a password reset link.</p>
+        </div>
+
+        <form id="forgot-password-form" onsubmit="handleForgotPasswordSubmit(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Your Account Email</label>
+            <input type="email" id="forgot-email-input" required placeholder="alex@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 outline-none transition">
+          </div>
+
+          <!-- Forgot Error / Success Alerts -->
+          <div id="forgot-error-box" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 font-medium flex items-center gap-1.5">
+            <i data-lucide="alert-circle" class="w-4 h-4 text-red-600 flex-shrink-0"></i>
+            <span id="forgot-error-msg"></span>
+          </div>
+
+          <div id="forgot-success-box" class="hidden p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 space-y-2">
+            <div class="flex items-center gap-1.5 font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+              <span>Password reset link generated!</span>
+            </div>
+            <p class="text-[11px] text-slate-600" id="forgot-success-desc">Click the link below to set your new password:</p>
+            <a id="forgot-reset-link-btn" href="#" class="block text-center py-2 px-3 rounded-lg bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-700 shadow-xs transition">
+              Reset Password Now →
+            </a>
+          </div>
+
+          <button type="submit" id="forgot-submit-btn" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-sm shadow-md transition">
+            Send Password Reset Link
+          </button>
+
+          <div class="pt-2 text-center">
+            <button type="button" onclick="switchAuthTab('login')" class="text-xs text-brand-600 hover:underline font-bold flex items-center justify-center gap-1 mx-auto">
+              <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Sign In
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- 3. RESET PASSWORD FORM -->
+      <div id="reset-password-view" class="hidden space-y-4">
+        <div class="text-center mb-4">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-brand-600 mx-auto flex items-center justify-center mb-2 border border-blue-200">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Set New Password</h3>
+          <p class="text-xs text-slate-500 mt-1">Please enter a new password (min. 6 characters).</p>
+        </div>
+
+        <form id="reset-password-form" onsubmit="handleResetPasswordSubmit(event)" class="space-y-4">
+          <input type="hidden" id="reset-token-input">
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">New Password</label>
+            <input type="password" id="reset-new-password-input" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 outline-none transition">
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Confirm New Password</label>
+            <input type="password" id="reset-confirm-password-input" required minlength="6" placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 outline-none transition">
+          </div>
+
+          <!-- Reset Error / Success Alerts -->
+          <div id="reset-error-box" class="hidden p-3 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 font-medium flex items-center gap-1.5">
+            <i data-lucide="alert-circle" class="w-4 h-4 text-red-600 flex-shrink-0"></i>
+            <span id="reset-error-msg"></span>
+          </div>
+
+          <div id="reset-success-box" class="hidden p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 font-bold flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+            <span>Password updated! Redirecting to Sign In...</span>
+          </div>
+
+          <button type="submit" id="reset-submit-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-mint-600 text-white font-extrabold text-sm shadow-md transition">
+            Save New Password & Continue
+          </button>
+
+          <div class="pt-2 text-center">
+            <button type="button" onclick="switchAuthTab('login')" class="text-xs text-slate-500 hover:text-slate-800 font-bold">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= VIEW 1: MAIN PUBLIC LANDING ================= -->
+  <div id="view-landing">
+
+    <!-- HERO SECTION -->
+    <section id="hero-section" class="relative pt-8 pb-14 md:pt-16 md:pb-24 overflow-hidden mesh-gradient-bg border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- TikTok & Graduate Banner -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-blue-200/80 text-xs font-bold text-brand-700 shadow-xs">
+            <span class="flex h-2 w-2 rounded-full bg-mint-500 animate-ping"></span>
+            <span>🔥 Viral Career Hack: <b>The $9.99 Job-Ready Kit</b></span>
+            <span class="text-slate-300">|</span>
+            <span class="text-slate-500 font-medium">Headshots + ATS Resume in 2 mins</span>
+          </div>
+          <span class="hidden lg:inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+            <i data-lucide="globe" class="w-3.5 h-3.5 text-emerald-600"></i> UK, US, Nigeria & Global Job Seekers
+          </span>
+        </div>
+
+        <!-- Hero Copy -->
+        <div class="text-center max-w-4xl mx-auto mb-10 md:mb-14">
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 mb-4 sm:mb-6 leading-[1.14]">
+            Why Pay $35 for Just Headshots? <br>
+            <span class="gradient-hero-title">Get 40 Photos + An ATS Resume For $9.99</span>
+          </h1>
+          <p class="text-base sm:text-lg lg:text-xl text-slate-600 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
+            Other tools charge $29–$35 and make you wait 2 hours for photos only. JobReady delivers <span class="text-slate-900 font-bold">40 studio-grade AI headshots</span> PLUS an <span class="text-slate-900 font-bold">ATS-optimized CV</span> customized for your specific job in 2 minutes.
+          </p>
+
+          <!-- Main CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto mb-8">
+            <a href="#order-flow" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 via-brand-700 to-mint-600 hover:opacity-95 text-white font-extrabold text-base shadow-gradient-glow transition-all transform active:scale-95 flex items-center justify-center gap-2">
+              <i data-lucide="zap" class="w-5 h-5 text-amber-300 fill-amber-300"></i>
+              <span>Get Your Pack — $9.99</span>
+            </a>
+            <a href="#how-it-works" class="w-full sm:w-auto px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-bold text-base transition-colors flex items-center justify-center gap-2 border border-slate-300 shadow-xs">
+              <i data-lucide="workflow" class="w-5 h-5 text-brand-600"></i>
+              <span>How It Works</span>
+            </a>
+          </div>
+
+          <!-- Feature Trust Matrix Row -->
+          <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-7 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-200/80 max-w-2xl mx-auto">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-mint-600"></i>
+              <span>3-6 Selfies Only (Not 20)</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="clock" class="w-4 h-4 text-brand-600"></i>
+              <span>2-Minute Turnaround</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-mint-600"></i>
+              <span>Anti-Plastic Skin Guarantee</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-400"></i>
+              <span>4.9/5 Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO DUAL SHOWCASE -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch max-w-6xl mx-auto">
+          
+          <!-- Column 1: Interactive Headshot Transformation (7 Cols) -->
+          <div class="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-subtle-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand-600">Pillar 1: 4K Studio Headshots</span>
+                  <h3 class="text-lg sm:text-xl font-bold text-slate-900">Recruiter-Safe Natural Likeness</h3>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-mint-50 text-mint-700 text-xs font-bold border border-mint-200">
+                  4 Looks Included
+                </span>
+              </div>
+
+              <!-- Interactive Style Pill Buttons -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mb-4" id="hero-style-pills">
+                <button onclick="switchHeroStyle(0)" class="hero-style-btn active px-2.5 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white shadow-xs transition-all text-center">
+                  👔 Corporate
+                </button>
+                <button onclick="switchHeroStyle(1)" class="hero-style-btn px-2.5 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all text-center">
+                  💻 Tech Founder
+                </button>
+                <button onclick="switchHeroStyle(2)" class="hero-style-btn px-2.5 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all text-center">
+                  ☕ Smart Casual
+                </button>
+                <button onclick="switchHeroStyle(3)" class="hero-style-btn px-2.5 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all text-center">
+                  📸 Studio 4K
+                </button>
+              </div>
+
+              <!-- Side-by-Side Before/After Cards -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <!-- Uploaded Selfie -->
+                <div class="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-100 aspect-[4/5] shadow-inner">
+                  <img id="hero-before-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80" alt="Casual Selfie" class="w-full h-full object-cover">
+                  <div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-md text-[10px] font-bold text-slate-700 shadow-xs border border-slate-200">
+                    📱 Phone Selfie (Upload 3-6)
+                  </div>
+                  <div class="absolute bottom-2.5 inset-x-2.5 text-[11px] text-slate-700 bg-white/95 backdrop-blur-md p-2 rounded-lg border border-slate-200 shadow-xs font-medium">
+                    Casual phone photo with basic light
+                  </div>
+                </div>
+
+                <!-- AI Studio Output -->
+                <div class="relative rounded-2xl overflow-hidden border-2 border-brand-500 bg-white shadow-md aspect-[4/5] group">
+                  <img id="hero-after-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80" alt="AI Studio Generated Headshot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                  <div class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-brand-600 text-[10px] font-bold text-white shadow-md flex items-center gap-1">
+                    <i data-lucide="sparkles" class="w-3 h-3 text-amber-300"></i> AI Studio Output
+                  </div>
+                  <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-md bg-white/95 backdrop-blur text-[10px] font-mono font-bold text-mint-700 border border-mint-200">
+                    4K • 300 DPI
+                  </div>
+                  <div class="absolute bottom-2.5 inset-x-2.5 text-[11px] text-slate-900 bg-white/95 backdrop-blur-md p-2 rounded-lg border border-slate-200 shadow-xs flex items-center justify-between">
+                    <span id="hero-style-label" class="font-bold text-slate-800 text-[11px]">Corporate Executive • Navy</span>
+                    <span class="text-mint-600 font-extrabold text-[11px]">100% Real Skin</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price Comparison footer -->
+            <div class="mt-4 p-2.5 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
+              <span class="text-slate-500 font-medium">Competitors (Aragon / BetterPic / HeadshotPro):</span>
+              <span class="line-through text-slate-400 font-semibold">$29 – $49</span>
+              <span class="text-mint-700 font-bold bg-mint-50 px-2.5 py-0.5 rounded-md border border-mint-200">JobReady: $9.99 (With CV)</span>
+            </div>
+          </div>
+
+          <!-- Column 2: ATS Resume Matcher Card (5 Cols) -->
+          <div class="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-subtle-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <span class="text-[11px] font-extrabold uppercase tracking-wider text-mint-600">Pillar 2: ATS Tailoring</span>
+                  <h3 class="text-lg sm:text-xl font-bold text-slate-900">Live Resume Matcher</h3>
+                </div>
+                <div class="px-2.5 py-1 rounded-full bg-blue-50 text-brand-700 font-mono text-xs font-bold border border-blue-200">
+                  Claude 3.5
+                </div>
+              </div>
+
+              <!-- Mini CV Doc -->
+              <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-xs shadow-inner space-y-3.5">
+                <!-- Person -->
+                <div class="flex items-center gap-3 pb-2.5 border-b border-slate-200">
+                  <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-brand-600 to-mint-500 flex items-center justify-center text-white font-bold text-xs shadow">
+                    JD
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-900 text-xs sm:text-sm">Jordan Davies</div>
+                    <div class="text-slate-500 text-[10px] font-medium">Senior Growth & Operations Lead</div>
+                  </div>
+                </div>
+
+                <!-- ATS Score Card -->
+                <div class="p-3 rounded-xl bg-white border border-mint-200 shadow-xs flex items-center justify-between">
+                  <div>
+                    <div class="text-[10px] text-slate-500 uppercase font-bold">ATS Compatibility Score</div>
+                    <div class="text-lg sm:text-xl font-extrabold text-mint-600">96 / 100 <span class="text-[11px] text-slate-400 font-medium">(Top 2%)</span></div>
+                  </div>
+                  <div class="h-9 w-9 rounded-full bg-mint-50 border-2 border-mint-500 flex items-center justify-center text-mint-600 font-bold text-sm">
+                    ✓
+                  </div>
+                </div>
+
+                <!-- Highlighted bullets -->
+                <div class="space-y-1.5">
+                  <div class="text-[10px] font-bold text-slate-700 uppercase tracking-wider">Tailored Experience (Job Matched):</div>
+                  <div class="p-2 rounded-lg bg-white border border-slate-200 text-[11px] text-slate-700 leading-relaxed shadow-xs">
+                    • Spearheaded <span class="bg-blue-50 text-brand-700 font-semibold px-1 rounded border border-blue-200 font-mono text-[10px]">cross-functional agile sprints</span> cutting delivery time by <span class="text-mint-600 font-bold">38%</span>.
+                  </div>
+                  <div class="p-2 rounded-lg bg-white border border-slate-200 text-[11px] text-slate-700 leading-relaxed shadow-xs">
+                    • Deployed <span class="bg-blue-50 text-brand-700 font-semibold px-1 rounded border border-blue-200 font-mono text-[10px]">SQL data pipelines</span> for executive leadership reporting.
+                  </div>
+                </div>
+
+                <div class="p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-[10px] sm:text-[11px] text-amber-900 font-medium">
+                  <span class="font-bold">💡 Anti-Hallucination:</span> 100% authentic facts reordered to pass automated recruiter screeners.
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 text-center">
+              <span class="text-xs text-slate-500 font-semibold">Headshots + tailored CV sold together in one pack.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMPETITOR COMPARISON MATRIX -->
+    <section id="comparison" class="py-14 sm:py-20 bg-white border-b border-slate-200 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600">The Market Blindspot</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-3">
+            Why JobReady Crushes Traditional & AI Competitors
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Competitors charge high fees for photos only. We give job seekers the complete application weapon for less than a quarter of the price.
+          </p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[650px] bg-white rounded-3xl border border-slate-200 shadow-card-lift overflow-hidden">
+            <thead>
+              <tr class="border-b border-slate-200 bg-slate-50 text-xs font-bold uppercase text-slate-600">
+                <th class="p-4 sm:p-5">Feature / Guarantee</th>
+                <th class="p-4 sm:p-5 text-brand-700 bg-blue-50/80 font-extrabold border-x border-blue-200">
+                  <span class="flex items-center gap-1.5"><i data-lucide="sparkles" class="w-4 h-4 text-brand-600"></i> JobReady Pack</span>
+                </th>
+                <th class="p-4 sm:p-5 text-slate-700">Aragon / BetterPic</th>
+                <th class="p-4 sm:p-5 text-slate-700">HeadshotPro</th>
+                <th class="p-4 sm:p-5 text-slate-700">Profile Bakery</th>
+                <th class="p-4 sm:p-5 text-slate-700">Photo Studio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-xs sm:text-sm font-medium text-slate-700">
+              <tr>
+                <td class="p-4 sm:p-5 font-bold text-slate-900">Starting Price</td>
+                <td class="p-4 sm:p-5 font-extrabold text-mint-700 bg-blue-50/80 border-x border-blue-200 text-base">$9.99</td>
+                <td class="p-4 sm:p-5 text-slate-600">$35.00</td>
+                <td class="p-4 sm:p-5 text-slate-600">$29.00</td>
+                <td class="p-4 sm:p-5 text-slate-600">$24.00</td>
+                <td class="p-4 sm:p-5 text-slate-400 line-through">$200 - $350</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-bold text-slate-900">Generation Turnaround</td>
+                <td class="p-4 sm:p-5 font-bold text-slate-900 bg-blue-50/80 border-x border-blue-200">⚡ 2 Minutes</td>
+                <td class="p-4 sm:p-5 text-slate-600">30 - 60 Mins</td>
+                <td class="p-4 sm:p-5 text-slate-600">2 Hours</td>
+                <td class="p-4 sm:p-5 text-slate-600">1 - 2 Hours</td>
+                <td class="p-4 sm:p-5 text-slate-600">3 - 7 Days</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-bold text-slate-900">Selfies Required</td>
+                <td class="p-4 sm:p-5 font-bold text-slate-900 bg-blue-50/80 border-x border-blue-200">3 to 6 Selfies</td>
+                <td class="p-4 sm:p-5 text-slate-600">14 - 20 Photos</td>
+                <td class="p-4 sm:p-5 text-slate-600">16 - 20 Photos</td>
+                <td class="p-4 sm:p-5 text-slate-600">10 - 15 Photos</td>
+                <td class="p-4 sm:p-5 text-slate-600">Physical Presence</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-bold text-slate-900">Dynamic ATS Resume Tailoring</td>
+                <td class="p-4 sm:p-5 font-extrabold text-mint-700 bg-blue-50/80 border-x border-blue-200 flex items-center gap-1.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-mint-600"></i> Included (Claude 3.5)
+                </td>
+                <td class="p-4 sm:p-5 text-slate-400">❌ None (Photos only)</td>
+                <td class="p-4 sm:p-5 text-slate-400">❌ None (Photos only)</td>
+                <td class="p-4 sm:p-5 text-slate-500">Static Word Templates</td>
+                <td class="p-4 sm:p-5 text-slate-400">❌ None</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-bold text-slate-900">Natural Skin & Anti-Plastic Filter</td>
+                <td class="p-4 sm:p-5 font-bold text-mint-700 bg-blue-50/80 border-x border-blue-200">
+                  ✓ Recruiter-Safe Skin Pores
+                </td>
+                <td class="p-4 sm:p-5 text-slate-500">Often Over-smoothed</td>
+                <td class="p-4 sm:p-5 text-slate-500">Variable Likeness</td>
+                <td class="p-4 sm:p-5 text-slate-500">Standard AI</td>
+                <td class="p-4 sm:p-5 text-mint-700">Real Photo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- FREE HOOK 2: LINKEDIN PHOTO ROASTER -->
+    <section id="photo-roaster" class="py-14 sm:py-20 bg-white border-b border-slate-200 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-bold uppercase tracking-wider border border-amber-200 mb-3">
+            <i data-lucide="flame" class="w-3.5 h-3.5 text-amber-600"></i> Free Profile Tool
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-2">
+            Free LinkedIn Photo Grader & Roaster
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            Recruiters spend an average of 4 seconds on your photo before deciding whether to read your CV. See how yours scores.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 text-center shadow-xs">
+            <div class="w-16 h-16 rounded-full bg-amber-50 text-amber-600 font-extrabold text-2xl flex items-center justify-center mx-auto mb-3 border-2 border-amber-300">
+              42<span class="text-xs">/100</span>
+            </div>
+            <div class="text-xs font-bold uppercase text-slate-500">Average Unoptimized Photo Score</div>
+            <p class="text-xs text-slate-600 mt-2">Common issues: Poor bedroom lighting, casual collar, busy background.</p>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 text-center shadow-xs">
+            <div class="w-16 h-16 rounded-full bg-mint-50 text-mint-700 font-extrabold text-2xl flex items-center justify-center mx-auto mb-3 border-2 border-mint-400">
+              98<span class="text-xs">/100</span>
+            </div>
+            <div class="text-xs font-bold uppercase text-slate-500">With JobReady 4K Studio Pack</div>
+            <p class="text-xs text-slate-600 mt-2">Executive navy blazer, 3-point rim lighting, clean office bokeh.</p>
+          </div>
+
+          <div class="text-center md:text-left space-y-3">
+            <h4 class="font-bold text-slate-900 text-base">Stop Losing Recruiter DMs</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Upgrade your profile photo and resume together for just $9.99 and start seeing interview callbacks this week.
+            </p>
+            <button onclick="handleUnlockPackClick()" class="w-full py-3 rounded-xl bg-gradient-to-r from-brand-600 to-mint-600 text-white font-bold text-xs text-center shadow-sm hover:opacity-95 transition">
+              Upgrade My Profile For $9.99 →
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600">Transparent Pricing</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-3">
+          One Simple Pack. No Hidden Subscriptions.
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Pay once. Get lifetime dashboard access. Top up anytime.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto items-stretch">
+        
+        <!-- STARTER PLAN ($9.99) -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-300 shadow-subtle-card flex flex-col justify-between relative hover:shadow-card-lift transition">
+          <div>
+            <div class="text-xs font-extrabold uppercase tracking-wider text-brand-600 mb-1.5">Single Application</div>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-1">Starter Pack</h3>
+            <p class="text-xs text-slate-500 mb-5">Perfect for tailoring for your primary dream role.</p>
+            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">$9.99 <span class="text-xs font-normal text-slate-500">one-time</span></div>
+            <div class="text-[11px] text-mint-700 font-bold mb-6">Save $25+ vs Aragon & HeadshotPro</div>
+
+            <ul class="space-y-3 text-xs text-slate-700 font-medium mb-8">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-600 font-bold"></i><span><b>20 High-Res AI Headshots</b> (4 styles)</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-600 font-bold"></i><span><b>1 Tailored CV</b> for target job ad</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-600 font-bold"></i><span>Full ATS Keyword Optimization</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-600 font-bold"></i><span>Clean PDF & Markdown Export</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPlanAndScroll('starter')" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs text-center transition shadow-md">Get Starter Pack — $9.99</button>
+        </div>
+
+        <!-- JOB HUNT PLAN ($19.99) - BEST VALUE -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border-2 border-brand-600 shadow-xl flex flex-col justify-between relative bg-gradient-to-b from-blue-50/40 via-white to-white">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-brand-600 to-mint-600 text-[11px] font-extrabold uppercase tracking-wider text-white shadow-md">🔥 Best Value • Most Popular</div>
+          <div>
+            <div class="text-xs font-extrabold uppercase tracking-wider text-brand-600 mb-1.5">Serious Job Seekers</div>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-1">Job Hunt Pack</h3>
+            <p class="text-xs text-slate-500 mb-5">Designed for landing interviews across multiple applications.</p>
+            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">$19.99 <span class="text-xs font-normal text-slate-500">one-time</span></div>
+            <div class="text-[11px] text-brand-700 font-bold mb-6">5x more CVs + LinkedIn Makeover</div>
+
+            <ul class="space-y-3 text-xs text-slate-800 font-medium mb-8">
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-mint-600 font-bold"></i><span><b>40 Studio-Grade Headshots</b> (All angles)</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-mint-600 font-bold"></i><span><b>5 Custom Tailored CVs</b></span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 font-bold"></i><span class="text-amber-800 font-bold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">✨ Complete LinkedIn Rewrite</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-mint-600 font-bold"></i><span>Priority High-Speed Generation Queue</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPlanAndScroll('hunt')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-500 hover:to-brand-600 text-white font-extrabold text-xs text-center shadow-lg shadow-brand-600/30 transition">Get Job Hunt Pack — $19.99</button>
+        </div>
+
+        <!-- 5X CV TOP-UP ($4.99) -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-subtle-card flex flex-col justify-between hover:shadow-card-lift transition">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1.5">Repeat Applications</div>
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-1">5x CV Top-Up</h3>
+            <p class="text-xs text-slate-500 mb-5">Add more tailored resume credits anytime.</p>
+            <div class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-1">$4.99 <span class="text-xs font-normal text-slate-500">add-on</span></div>
+            <div class="text-[11px] text-slate-500 font-medium mb-6">Under $1 per targeted ATS resume</div>
+
+            <ul class="space-y-3 text-xs font-medium text-slate-700 mb-8">
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-mint-600 font-bold"></i><span><b>5 Additional Tailored CVs</b></span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-mint-600 font-bold"></i><span>Target 5 distinct job ads</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-mint-600 font-bold"></i><span>Zero hallucination guarantee</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-mint-600 font-bold"></i><span>Instant generation in Dashboard</span></li>
+            </ul>
+          </div>
+          <button onclick="selectPlanAndScroll('starter')" class="w-full py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs text-center transition border border-slate-200">
+            Start with Starter Pack ($9.99)
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PACK BUILDER / ORDER FORM -->
+    <section id="order-flow" class="py-14 sm:py-20 bg-slate-100/80 border-t border-slate-200 relative">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-8 sm:mb-10">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600">Quick 2-Minute Checkout</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-2">Build Your Job-Ready Pack</h2>
+          <p class="text-slate-600 text-xs sm:text-sm">Upload your files, choose your tier, and proceed to secure checkout.</p>
+        </div>
+
+        <form id="order-form" class="bg-white rounded-3xl p-5 sm:p-10 border border-slate-200 shadow-xl space-y-6 sm:space-y-8">
+          
+          <!-- Auth Gate / Status Banner inside Order Form -->
+          <div id="order-auth-banner-unauthed" class="p-4 rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3.5">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+                <i data-lucide="lock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900">Sign In Required to Generate & Pay</div>
+                <div class="text-[11px] text-slate-600">Please sign in or register so your 4K headshots and ATS resumes are securely saved to your account.</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto flex-shrink-0">
+              <button type="button" onclick="openAuthModal('login', 'Sign in to process your payment and save your Job-Ready Pack')" class="flex-1 sm:flex-initial px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 font-bold text-xs shadow-xs transition">
+                Sign In
+              </button>
+              <button type="button" onclick="openAuthModal('signup', 'Create a fast account to process your payment and save your Job-Ready Pack')" class="flex-1 sm:flex-initial px-3.5 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs shadow-xs transition">
+                Create Account
+              </button>
+            </div>
+          </div>
+
+          <div id="order-auth-banner-authed" class="hidden p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-xl bg-emerald-600 text-white flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-4 h-4 font-extrabold"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-emerald-950">Verified Account Connected</span>
+                <div class="text-[11px] text-emerald-800 font-medium">Orders and generation results will be linked to <b id="order-authed-email-label"></b></div>
+              </div>
+            </div>
+            <button type="button" onclick="handleLogout()" class="text-xs font-bold text-emerald-800 hover:text-red-600 underline transition">
+              Switch
+            </button>
+          </div>
+
+          <!-- 1. Plan Selector -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2.5">1. Select Your Pack Tier</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <label class="cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 border-slate-200 bg-slate-50 hover:border-brand-500 transition plan-radio-label" id="label-plan-starter" onclick="if(!currentUser){selectPlanAndScroll('starter');}">
+                <input type="radio" name="plan" value="starter" class="sr-only" onchange="updatePlanSelection()">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-slate-900 text-sm sm:text-base">Starter Pack</span>
+                  <span class="font-extrabold text-brand-600 text-base sm:text-lg">$9.99</span>
+                </div>
+                <span class="text-xs text-slate-500 font-medium">20 Headshots + 1 Tailored CV</span>
+              </label>
+
+              <label class="cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 border-brand-600 bg-blue-50/60 transition plan-radio-label" id="label-plan-hunt" onclick="if(!currentUser){selectPlanAndScroll('hunt');}">
+                <input type="radio" name="plan" value="hunt" checked class="sr-only" onchange="updatePlanSelection()">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-slate-900 text-sm sm:text-base flex items-center gap-1.5">
+                    Job Hunt Pack <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-brand-600 text-white font-bold">BEST</span>
+                  </span>
+                  <span class="font-extrabold text-mint-700 text-base sm:text-lg">$19.99</span>
+                </div>
+                <span class="text-xs text-slate-600 font-medium">40 Headshots + 5 Tailored CVs + LinkedIn</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 2. Email Address -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-700">2. Account Email</label>
+              <span id="order-email-badge" class="text-xs font-semibold text-slate-500">Auto-filled from account</span>
+            </div>
+            <div class="relative">
+              <i data-lucide="mail" class="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5"></i>
+              <input type="email" name="email" id="order-email" required placeholder="alex@example.com" class="w-full pl-11 pr-4 py-3 rounded-xl bg-white border border-slate-300 text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 outline-none transition shadow-xs">
+            </div>
+          </div>
+
+          <!-- 3. Selfies Upload -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-700">3. Upload 3 to 6 Selfies (JPG/PNG)</label>
+              <span id="selfie-count-badge" class="text-xs font-mono font-bold text-slate-500">0 / 6 uploaded</span>
+            </div>
+            
+            <div class="border-2 border-dashed border-slate-300 hover:border-brand-500 rounded-2xl p-5 sm:p-6 text-center bg-slate-50 hover:bg-blue-50/30 transition cursor-pointer relative" onclick="document.getElementById('selfies-input').click()">
+              <input type="file" id="selfies-input" name="selfies" accept="image/jpeg,image/png,image/webp" multiple required class="hidden" onchange="handleSelfiesSelected(this)">
+              <div class="w-10 h-10 rounded-xl bg-blue-100 text-brand-600 mx-auto flex items-center justify-center mb-2">
+                <i data-lucide="upload-cloud" class="w-5 h-5"></i>
+              </div>
+              <div class="text-xs sm:text-sm font-bold text-slate-900">Click or tap to choose 3–6 clear selfie photos</div>
+              <div class="text-[11px] text-slate-500 mt-1">Well-lit face, no sunglasses, varying angles recommended</div>
+            </div>
+
+            <!-- Previews Grid -->
+            <div id="selfie-thumbnails" class="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-3 empty:hidden"></div>
+          </div>
+
+          <!-- 4. CV Upload (PDF) -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">4. Your Current CV / Resume (PDF)</label>
+            <div class="border border-slate-300 hover:border-brand-500 rounded-2xl p-3.5 sm:p-4 bg-slate-50 flex items-center justify-between gap-3 cursor-pointer" onclick="document.getElementById('cv-input').click()">
+              <input type="file" id="cv-input" name="cv" accept="application/pdf" required class="hidden" onchange="handleCvSelected(this)">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-mint-100 text-mint-700 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="file-text" class="w-5 h-5"></i>
+                </div>
+                <div class="truncate">
+                  <div id="cv-filename" class="text-xs sm:text-sm font-bold text-slate-900 truncate">Select your resume (.pdf)</div>
+                  <div id="cv-filesize" class="text-[11px] text-slate-500 font-medium">Maximum 10 MB</div>
+                </div>
+              </div>
+              <span class="text-xs font-bold px-3 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-300 shadow-xs flex-shrink-0">Browse</span>
+            </div>
+          </div>
+
+          <!-- 5. Job Description -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-slate-700">5. Target Job Description</label>
+              <button type="button" onclick="copyJobToForm()" class="text-xs text-brand-600 hover:text-brand-700 font-bold">Use preview text</button>
+            </div>
+            <textarea name="job_ad" id="order-job-ad" rows="4" required placeholder="Paste the target job description and requirements here..." class="w-full rounded-xl bg-white border border-slate-300 p-3.5 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 outline-none transition shadow-xs"></textarea>
+          </div>
+
+          <!-- Error Alert -->
+          <div id="order-error-box" class="hidden p-3.5 rounded-xl bg-red-50 border border-red-200 text-xs text-red-700 flex items-center gap-2 font-medium">
+            <i data-lucide="alert-circle" class="w-4 h-4 text-red-600 flex-shrink-0"></i>
+            <span id="order-error-msg"></span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" id="order-submit-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-600 via-brand-700 to-mint-600 hover:opacity-95 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-brand-600/25 transition flex items-center justify-center gap-2">
+            <i data-lucide="lock" class="w-4 h-4 text-white"></i>
+            <span id="submit-btn-label">Continue to Secure Stripe Payment ($19.99)</span>
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-14 sm:py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600">Common Inquiries</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-2">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-3.5">
+        <details class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 group shadow-xs">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Why is JobReady $9.99 while competitors charge $29–$35+?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed font-normal">
+            We engineered an ultra-efficient parallel Flux Pro LoRA pipeline that eliminates heavy server overhead and passes the savings directly to job seekers.
+          </p>
+        </details>
+        <details class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 group shadow-xs">
+          <summary class="font-bold text-slate-900 text-sm sm:text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Can I access my packs from any device?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed font-normal">
+            Yes! Sign in to your JobReady Dashboard from any phone or desktop to view, download, or tailor additional CVs.
+          </p>
+        </details>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- ================= VIEW 2: MEMBER DASHBOARD ================= -->
+  <div id="view-dashboard" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full hidden">
+    
+    <!-- Dashboard Header -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between pb-8 border-b border-slate-200 gap-4">
+      <div>
+        <div class="flex items-center gap-2 mb-1">
+          <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200">Active Member</span>
+          <span class="text-xs text-slate-400 font-mono" id="dash-user-email"></span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Member Studio Dashboard</h1>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1">Manage your 4K headshots, customize ATS resumes, and tailor for target jobs.</p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <a href="#order-flow" onclick="showView('landing')" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-mint-600 text-white text-xs font-bold shadow-sm hover:opacity-95 flex items-center gap-2">
+          <i data-lucide="plus" class="w-4 h-4"></i> New Job Pack
+        </a>
+        <button onclick="showView('landing')" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold border border-slate-200">
+          Home
+        </button>
+      </div>
+    </div>
+
+    <!-- STATS OVERVIEW CARDS -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 my-8">
+      
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-subtle-card">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Total Packs</span>
+          <i data-lucide="package" class="w-4 h-4 text-brand-600"></i>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900" id="stat-total-packs">0</div>
+        <div class="text-[11px] text-slate-500 mt-1">Active Job Packs</div>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-subtle-card">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">4K Headshots</span>
+          <i data-lucide="camera" class="w-4 h-4 text-mint-600"></i>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-mint-600" id="stat-total-headshots">0</div>
+        <div class="text-[11px] text-slate-500 mt-1">High-Res Studio Photos</div>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-subtle-card">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Tailored CVs</span>
+          <i data-lucide="file-text" class="w-4 h-4 text-violet-600"></i>
+        </div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-slate-900" id="stat-total-cvs">0</div>
+        <div class="text-[11px] text-slate-500 mt-1">ATS Resumes Created</div>
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-subtle-card">
+        <div class="flex items-center justify-between text-slate-400 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-500">CV Credits</span>
+          <i data-lucide="zap" class="w-4 h-4 text-amber-500"></i>
+        </div>
+        <div class="flex items-center justify-between">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-600" id="stat-credits-left">0</div>
+          <button onclick="triggerDashboardTopup()" class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200 hover:bg-emerald-100 transition">
+            + Top Up ($4.99)
+          </button>
+        </div>
+        <div class="text-[11px] text-slate-500 mt-1">Available for new jobs</div>
+      </div>
+
+    </div>
+
+    <!-- DASHBOARD TABS -->
+    <div class="flex border-b border-slate-200 mb-8 overflow-x-auto gap-2">
+      <button onclick="switchDashTab('packs')" id="dash-tab-btn-packs" class="px-5 py-3 font-bold text-xs sm:text-sm text-brand-600 border-b-2 border-brand-600 flex items-center gap-2 whitespace-nowrap">
+        <i data-lucide="layers" class="w-4 h-4"></i> My Job Packs
+      </button>
+      <button onclick="switchDashTab('headshots')" id="dash-tab-btn-headshots" class="px-5 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap">
+        <i data-lucide="camera" class="w-4 h-4"></i> Headshot Gallery
+      </button>
+      <button onclick="switchDashTab('cvs')" id="dash-tab-btn-cvs" class="px-5 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap">
+        <i data-lucide="file-text" class="w-4 h-4"></i> Tailored Resumes
+      </button>
+      <button onclick="switchDashTab('scanner')" id="dash-tab-btn-scanner" class="px-5 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap">
+        <i data-lucide="scan-line" class="w-4 h-4 text-brand-600"></i> 2-Minute ATS Match Checker
+      </button>
+    </div>
+
+    <!-- DASHBOARD TAB 1: PACKS LIST -->
+    <div id="dash-content-packs" class="space-y-4">
+      <div id="dash-packs-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- DASHBOARD TAB 2: HEADSHOTS -->
+    <div id="dash-content-headshots" class="hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-bold text-slate-900">All Generated Studio Photos</h3>
+        <button onclick="downloadAllDashHeadshots()" class="px-3.5 py-2 rounded-xl bg-brand-600 text-white text-xs font-bold hover:bg-brand-700 shadow-sm flex items-center gap-1.5">
+          <i data-lucide="download" class="w-4 h-4"></i> Download All
+        </button>
+      </div>
+      <div id="dash-headshots-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- DASHBOARD TAB 3: CVS -->
+    <div id="dash-content-cvs" class="hidden space-y-6">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-bold text-slate-900">All Tailored CV Versions</h3>
+      </div>
+      <div id="dash-cvs-container" class="space-y-6">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+
+    <!-- DASHBOARD TAB 4: 2-MINUTE ATS SCANNER -->
+    <div id="dash-content-scanner" class="hidden space-y-6">
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-subtle-card">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-11 h-11 rounded-2xl bg-blue-50 text-brand-600 flex items-center justify-center font-bold">
+            <i data-lucide="scan-line" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">2-Minute Instant ATS Job Scanner</h2>
+            <p class="text-xs text-slate-500 font-medium">Test any target job posting against recruiter ATS filters and uncover missing keywords.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div class="space-y-3.5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Paste Target Job Description</label>
+                <button type="button" onclick="loadSampleJob()" class="text-xs text-brand-600 hover:text-brand-700 font-bold">
+                  + Fill sample job
+                </button>
+              </div>
+              <textarea id="free-job-input" rows="6" placeholder="Paste the job description or role requirements here (e.g. Senior Operations Manager, Software Engineer)..." class="w-full rounded-2xl bg-slate-50 border border-slate-300 p-3.5 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:border-brand-600 outline-none transition shadow-xs"></textarea>
+            </div>
+            
+            <button id="free-scan-btn" onclick="runFreeScan()" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md shadow-brand-600/20 transition flex items-center justify-center gap-2">
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+              <span>Scan & Check ATS Match (2 Mins)</span>
+            </button>
+          </div>
+
+          <div id="free-scan-output" class="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between min-h-[260px]">
+            <div id="scan-idle-state" class="my-auto text-center py-6">
+              <div class="w-12 h-12 rounded-2xl bg-blue-100 text-brand-600 mx-auto flex items-center justify-center mb-3">
+                <i data-lucide="scan-face" class="w-6 h-6"></i>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">ATS & Recruiter Keyword Simulator</h4>
+              <p class="text-xs text-slate-500 max-w-xs mx-auto">
+                Paste any job ad on the left to extract essential ATS keywords and measure your candidate score.
+              </p>
+            </div>
+
+            <div id="scan-loading-state" class="hidden my-auto text-center py-6">
+              <div class="w-10 h-10 border-3 border-brand-600 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
+              <p class="text-xs text-brand-700 font-bold">Extracting recruiter competencies & ATS filters...</p>
+            </div>
+
+            <div id="scan-results-state" class="hidden space-y-3.5">
+              <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                <div>
+                  <span class="text-[10px] text-slate-500 uppercase font-bold">Current Raw Match</span>
+                  <div class="text-2xl font-extrabold text-amber-600" id="preview-score">58%</div>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] text-mint-700 uppercase font-bold">With JobReady Pack</span>
+                  <div class="text-2xl font-extrabold text-mint-600">96% <span class="text-xs">🚀</span></div>
+                </div>
+              </div>
+
+              <div>
+                <span class="text-[11px] font-bold text-slate-700 block mb-1.5">Missing High-Weight ATS Keywords:</span>
+                <div class="flex flex-wrap gap-1.5" id="preview-missing-keywords"></div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-blue-50 border border-blue-200 text-xs text-slate-700">
+                <span class="font-bold text-brand-900 block mb-0.5">ATS Advice:</span>
+                <span id="preview-advice" class="text-slate-600 text-[11px] leading-relaxed"></span>
+              </div>
+
+              <a href="#order-flow" onclick="showView('landing')" class="block text-center py-2.5 rounded-xl bg-mint-600 hover:bg-mint-700 text-white font-bold text-xs shadow-md transition">
+                Build Tailored CV For This Job →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ================= VIEW 3: ORDER RESULTS HUB (When ?o=<oid> is present) ================= -->
+  <div id="view-results" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full hidden">
+    
+    <!-- Order Banner Header -->
+    <div class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 mb-8 shadow-subtle-card">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span id="order-status-pill" class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-blue-50 text-brand-700 border border-blue-200 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brand-600 animate-ping"></span>
+              <span id="status-pill-text">Processing Your Pack...</span>
+            </span>
+            <span class="text-xs text-slate-500 font-mono font-semibold" id="order-id-label"></span>
+          </div>
+          <h1 class="text-xl sm:text-3xl font-extrabold text-slate-900" id="results-heading">
+            Your Job-Ready Pack is Generating
+          </h1>
+          <p class="text-slate-600 text-xs sm:text-sm mt-1 font-medium" id="order-status-desc">
+            Please keep this tab open. Your 4K studio headshots and ATS tailored CV will appear automatically.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5 noprint">
+          <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center gap-2 shadow-sm">
+            <i data-lucide="printer" class="w-4 h-4"></i> Save CV as PDF
+          </button>
+          <button onclick="showView('dashboard')" class="px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-brand-700 text-xs font-bold border border-blue-200">
+            Open Dashboard
+          </button>
+        </div>
+      </div>
+
+      <!-- Animated Progress Bar -->
+      <div id="progress-bar-container" class="mt-6 w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border border-slate-200">
+        <div id="results-progress-bar" class="bg-gradient-to-r from-brand-600 via-violet-600 to-mint-500 h-2.5 rounded-full transition-all duration-700 w-1/3 animate-pulse"></div>
+      </div>
+    </div>
+
+    <!-- TABS BAR -->
+    <div class="flex border-b border-slate-200 mb-6 sm:mb-8 overflow-x-auto noprint no-scrollbar gap-1 sm:gap-2">
+      <button onclick="switchTab('headshots')" id="tab-btn-headshots" class="px-4 sm:px-6 py-3 font-bold text-xs sm:text-sm text-brand-600 border-b-2 border-brand-600 flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+        <i data-lucide="camera" class="w-4 h-4"></i>
+        <span>Studio Headshots (<span id="count-headshots">0</span>)</span>
+      </button>
+      <button onclick="switchTab('cvs')" id="tab-btn-cvs" class="px-4 sm:px-6 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+        <i data-lucide="file-text" class="w-4 h-4"></i>
+        <span>Tailored CVs (<span id="count-cvs">0</span>)</span>
+      </button>
+      <button onclick="switchTab('linkedin')" id="tab-btn-linkedin" class="px-4 sm:px-6 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+        <i data-lucide="linkedin" class="w-4 h-4 text-brand-600"></i>
+        <span>LinkedIn Makeover</span>
+      </button>
+      <button onclick="switchTab('tailor-more')" id="tab-btn-tailor-more" class="px-4 sm:px-6 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+        <i data-lucide="plus-circle" class="w-4 h-4 text-mint-600"></i>
+        <span>Tailor Another Role (<span id="credits-left-badge">0 left</span>)</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: HEADSHOTS GALLERY -->
+    <div id="tab-headshots" class="space-y-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900">4K Studio Headshot Gallery</h2>
+          <p class="text-xs text-slate-500 font-medium">Click any photo to view full resolution or download.</p>
+        </div>
+        <button id="download-all-btn" onclick="downloadAllHeadshots()" class="px-3.5 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center gap-2 transition shadow-sm">
+          <i data-lucide="download" class="w-4 h-4"></i> Download All
+        </button>
+      </div>
+
+      <div id="headshots-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 sm:gap-4"></div>
+    </div>
+
+    <!-- TAB 2: TAILORED CVS -->
+    <div id="tab-cvs" class="hidden space-y-6">
+      <div id="cvs-container" class="space-y-6"></div>
+    </div>
+
+    <!-- TAB 3: LINKEDIN MAKEOVER -->
+    <div id="tab-linkedin" class="hidden space-y-6">
+      <div class="max-w-3xl bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-subtle-card">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-11 h-11 rounded-2xl bg-[#0A66C2]/10 text-[#0A66C2] flex items-center justify-center font-bold">
+            <i data-lucide="linkedin" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900">LinkedIn Profile Optimizer</h2>
+            <p class="text-xs text-slate-500 font-medium">Copy these into your LinkedIn profile to attract recruiter DMs.</p>
+          </div>
+        </div>
+        <div class="space-y-4" id="linkedin-content-box"></div>
+      </div>
+    </div>
+
+    <!-- TAB 4: TAILOR FOR ANOTHER ROLE -->
+    <div id="tab-tailor-more" class="hidden space-y-6 max-w-3xl">
+      <div class="bg-white rounded-3xl p-5 sm:p-8 border border-slate-200 shadow-subtle-card">
+        <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-1">Tailor CV For Another Role</h2>
+        <p class="text-xs text-slate-500 mb-6 font-medium">You have <b id="cvs-remaining-count" class="text-mint-700 font-bold">0</b> tailoring credits remaining.</p>
+
+        <form id="tailor-more-form" class="space-y-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Paste New Target Job Ad</label>
+            <textarea name="job_ad" id="tailor-more-job-ad" rows="5" required placeholder="Paste another job description here..." class="w-full rounded-xl bg-white border border-slate-300 p-3.5 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:border-brand-600 outline-none transition shadow-xs"></textarea>
+          </div>
+          <button type="submit" id="tailor-more-btn" class="px-5 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs flex items-center gap-2 transition shadow-sm">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Tailor This CV Now
+          </button>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200">
+          <div>
+            <div class="text-sm font-bold text-slate-900">Need more tailored CVs?</div>
+            <div class="text-xs text-slate-500 font-medium">Get 5 more tailored CV credits for only $4.99.</div>
+          </div>
+          <button onclick="triggerTopup()" id="topup-btn" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-mint-600 hover:bg-mint-700 text-white font-bold text-xs shadow-sm transition flex items-center justify-center gap-1.5">
+            <i data-lucide="credit-card" class="w-3.5 h-3.5"></i> Top Up 5 CVs ($4.99)
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-slate-200 py-10 mt-auto noprint">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg bg-brand-600 flex items-center justify-center text-white shadow-xs">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+        </div>
+        <span class="font-extrabold text-slate-900 tracking-tight text-sm">JobReady Pack</span>
+        <span class="text-slate-400 text-xs">© 2026. All rights reserved.</span>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-5 text-xs font-semibold text-slate-500">
+        <a href="javascript:showView('landing')" class="hover:text-brand-600">Home</a>
+        <a href="#how-it-works" onclick="showView('landing')" class="hover:text-brand-600">How It Works</a>
+        <a href="#photo-roaster" onclick="showView('landing')" class="hover:text-brand-600">Photo Grader</a>
+        <a href="#comparison" onclick="showView('landing')" class="hover:text-brand-600">vs Competitors</a>
+        <a href="#pricing" onclick="showView('landing')" class="hover:text-brand-600">Pricing</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT APP STATE & LOGIC ================= -->
+  <script>
+    lucide.createIcons();
+
+    const $ = s => document.querySelector(s);
+    const $$ = s => document.querySelectorAll(s);
+    const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+    let currentUser = null;
+    let authMode = 'login'; // 'login' or 'signup'
+    let pendingOrderSubmit = false;
+    let selectedPlanForAuth = null;
+
+    // View Routing (SPA)
+    function showView(viewName) {
+      $('#view-landing').classList.add('hidden');
+      $('#view-dashboard').classList.add('hidden');
+      $('#view-results').classList.add('hidden');
+
+      if (viewName === 'dashboard') {
+        if (!currentUser) {
+          openAuthModal('login', 'Please sign in to access your Member Dashboard');
+          return;
+        }
+        $('#view-dashboard').classList.remove('hidden');
+        loadDashboardData();
+      } else if (viewName === 'results') {
+        $('#view-results').classList.remove('hidden');
+      } else {
+        $('#view-landing').classList.remove('hidden');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Auth State Check
+    async function checkAuth() {
+      try {
+        const res = await fetch('/api/auth/me');
+        if (res.ok) {
+          const data = await res.json();
+          currentUser = data.user;
+        } else {
+          currentUser = null;
+        }
+      } catch (e) {
+        currentUser = null;
+      }
+      updateNavbarAuth();
+      updateOrderAuthStatus();
+    }
+
+    function updateNavbarAuth() {
+      if (currentUser) {
+        $('#nav-logged-out').classList.add('hidden');
+        $('#nav-logged-in').classList.remove('hidden');
+        $('#user-avatar-initials').textContent = (currentUser.full_name || currentUser.email).substring(0, 2).toUpperCase();
+        $('#dash-user-email').textContent = currentUser.email;
+        if ($('#mobile-auth-btn')) {
+          $('#mobile-auth-btn').textContent = 'Dashboard';
+          $('#mobile-auth-btn').onclick = () => { showView('dashboard'); closeMobileMenu(); };
+        }
+      } else {
+        $('#nav-logged-out').classList.remove('hidden');
+        $('#nav-logged-in').classList.add('hidden');
+        if ($('#mobile-auth-btn')) {
+          $('#mobile-auth-btn').textContent = 'Sign In';
+          $('#mobile-auth-btn').onclick = () => openAuthModal('login');
+        }
+      }
+    }
+
+    function updateOrderAuthStatus() {
+      const unauthedBanner = $('#order-auth-banner-unauthed');
+      const authedBanner = $('#order-auth-banner-authed');
+      const emailInput = $('#order-email');
+      const emailBadge = $('#order-email-badge');
+      const authedEmailLabel = $('#order-authed-email-label');
+
+      if (currentUser) {
+        if (unauthedBanner) unauthedBanner.classList.add('hidden');
+        if (authedBanner) authedBanner.classList.remove('hidden');
+        if (authedEmailLabel) authedEmailLabel.textContent = currentUser.email;
+        if (emailInput) {
+          emailInput.value = currentUser.email;
+          emailInput.readOnly = true;
+          emailInput.classList.add('bg-slate-100', 'text-slate-600', 'cursor-not-allowed');
+        }
+        if (emailBadge) {
+          emailBadge.textContent = '✓ Linked to your account';
+          emailBadge.className = 'text-xs font-bold text-mint-700';
+        }
+      } else {
+        if (unauthedBanner) unauthedBanner.classList.remove('hidden');
+        if (authedBanner) authedBanner.classList.add('hidden');
+        if (emailInput) {
+          emailInput.readOnly = false;
+          emailInput.classList.remove('bg-slate-100', 'text-slate-600', 'cursor-not-allowed');
+        }
+        if (emailBadge) {
+          emailBadge.textContent = 'Sign in required';
+          emailBadge.className = 'text-xs font-bold text-amber-700';
+        }
+      }
+      lucide.createIcons();
+    }
+
+    // Auth Modal Helpers
+    function openAuthModal(mode = 'login', promptText = null) {
+      authMode = mode;
+      switchAuthTab(mode);
+      
+      const promptBox = $('#auth-modal-prompt');
+      const promptSpan = $('#auth-modal-prompt-text');
+      if (promptText && promptBox && promptSpan) {
+        promptSpan.textContent = promptText;
+        promptBox.classList.remove('hidden');
+      } else if (promptBox) {
+        promptBox.classList.add('hidden');
+      }
+
+      $('#auth-modal').classList.remove('hidden');
+      $('#auth-error-box').classList.add('hidden');
+      lucide.createIcons();
+    }
+
+    function closeAuthModal() {
+      $('#auth-modal').classList.add('hidden');
+      pendingOrderSubmit = false;
+      selectedPlanForAuth = null;
+    }
+
+    function switchAuthTab(mode) {
+      authMode = mode;
+      const tabsContainer = $('#auth-tabs-container');
+      const authForm = $('#auth-form');
+      const forgotView = $('#forgot-password-view');
+      const resetView = $('#reset-password-view');
+      const errBox = $('#auth-error-box');
+
+      if (errBox) errBox.classList.add('hidden');
+      if ($('#forgot-error-box')) $('#forgot-error-box').classList.add('hidden');
+      if ($('#forgot-success-box')) $('#forgot-success-box').classList.add('hidden');
+      if ($('#reset-error-box')) $('#reset-error-box').classList.add('hidden');
+      if ($('#reset-success-box')) $('#reset-success-box').classList.add('hidden');
+
+      if (mode === 'signup') {
+        tabsContainer.classList.remove('hidden');
+        authForm.classList.remove('hidden');
+        forgotView.classList.add('hidden');
+        resetView.classList.add('hidden');
+        $('#auth-tab-signup').className = "flex-1 pb-3 font-extrabold text-sm text-brand-600 border-b-2 border-brand-600 text-center";
+        $('#auth-tab-login').className = "flex-1 pb-3 font-extrabold text-sm text-slate-400 hover:text-slate-600 border-b-2 border-transparent text-center";
+        $('#auth-name-field').classList.remove('hidden');
+        $('#auth-forgot-link').classList.add('hidden');
+        $('#auth-submit-label').textContent = "Create Account & Proceed";
+      } else if (mode === 'login') {
+        tabsContainer.classList.remove('hidden');
+        authForm.classList.remove('hidden');
+        forgotView.classList.add('hidden');
+        resetView.classList.add('hidden');
+        $('#auth-tab-login').className = "flex-1 pb-3 font-extrabold text-sm text-brand-600 border-b-2 border-brand-600 text-center";
+        $('#auth-tab-signup').className = "flex-1 pb-3 font-extrabold text-sm text-slate-400 hover:text-slate-600 border-b-2 border-transparent text-center";
+        $('#auth-name-field').classList.add('hidden');
+        $('#auth-forgot-link').classList.remove('hidden');
+        $('#auth-submit-label').textContent = "Sign In & Proceed";
+      } else if (mode === 'forgot') {
+        tabsContainer.classList.add('hidden');
+        authForm.classList.add('hidden');
+        forgotView.classList.remove('hidden');
+        resetView.classList.add('hidden');
+      } else if (mode === 'reset') {
+        tabsContainer.classList.add('hidden');
+        authForm.classList.add('hidden');
+        forgotView.classList.add('hidden');
+        resetView.classList.remove('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    function fillDemoAccount() {
+      $('#auth-email-input').value = 'alex.mercer@gmail.com';
+      $('#auth-password-input').value = 'jobready123';
+      if (authMode === 'signup') {
+        $('#auth-name-input').value = 'Alex Mercer';
+      }
+    }
+
+    async function handleForgotPasswordSubmit(e) {
+      e.preventDefault();
+      const email = $('#forgot-email-input').value.trim();
+      const errBox = $('#forgot-error-box');
+      const errTxt = $('#forgot-error-msg');
+      const successBox = $('#forgot-success-box');
+      const resetBtn = $('#forgot-reset-link-btn');
+      const submitBtn = $('#forgot-submit-btn');
+
+      errBox.classList.add('hidden');
+      successBox.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70');
+
+      try {
+        const res = await fetch('/api/auth/forgot-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || "Failed to process request");
+
+        if (data.reset_token) {
+          resetBtn.onclick = (event) => {
+            event.preventDefault();
+            $('#reset-token-input').value = data.reset_token;
+            switchAuthTab('reset');
+          };
+          successBox.classList.remove('hidden');
+          submitBtn.classList.add('hidden');
+        } else {
+          errTxt.textContent = data.message || "If this account exists, instructions have been sent.";
+          errBox.classList.remove('hidden');
+        }
+      } catch (err) {
+        errTxt.textContent = err.message;
+        errBox.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-70');
+        lucide.createIcons();
+      }
+    }
+
+    async function handleResetPasswordSubmit(e) {
+      e.preventDefault();
+      const token = $('#reset-token-input').value;
+      const newPassword = $('#reset-new-password-input').value;
+      const confirmPassword = $('#reset-confirm-password-input').value;
+      const errBox = $('#reset-error-box');
+      const errTxt = $('#reset-error-msg');
+      const successBox = $('#reset-success-box');
+      const submitBtn = $('#reset-submit-btn');
+
+      if (newPassword !== confirmPassword) {
+        errTxt.textContent = "Passwords do not match. Please re-enter.";
+        errBox.classList.remove('hidden');
+        return;
+      }
+
+      errBox.classList.add('hidden');
+      successBox.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70');
+
+      try {
+        const res = await fetch('/api/auth/reset-password', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token, new_password: newPassword })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || "Password reset failed");
+
+        successBox.classList.remove('hidden');
+        submitBtn.classList.add('hidden');
+        setTimeout(() => {
+          switchAuthTab('login');
+          submitBtn.classList.remove('hidden');
+          successBox.classList.add('hidden');
+          $('#auth-email-input').value = '';
+          $('#auth-password-input').value = '';
+          $('#auth-email-input').focus();
+        }, 1800);
+      } catch (err) {
+        errTxt.textContent = err.message;
+        errBox.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-70');
+        lucide.createIcons();
+      }
+    }
+
+    async function handleAuthSubmit(e) {
+      e.preventDefault();
+      const email = $('#auth-email-input').value.trim();
+      const password = $('#auth-password-input').value;
+      const fullName = $('#auth-name-input').value.trim();
+      const errBox = $('#auth-error-box');
+      const errTxt = $('#auth-error-msg');
+      const submitBtn = $('#auth-submit-btn');
+
+      errBox.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70');
+
+      const endpoint = authMode === 'signup' ? '/api/auth/signup' : '/api/auth/login';
+      const body = authMode === 'signup' ? { email, password, full_name: fullName } : { email, password };
+
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || "Authentication failed");
+
+        currentUser = data.user;
+        updateNavbarAuth();
+        updateOrderAuthStatus();
+        $('#auth-modal').classList.add('hidden');
+
+        if (pendingOrderSubmit) {
+          pendingOrderSubmit = false;
+          // Auto-trigger the order submission after authentication
+          setTimeout(() => {
+            if ($('#order-form').requestSubmit) {
+              $('#order-form').requestSubmit();
+            } else {
+              $('#order-submit-btn').click();
+            }
+          }, 200);
+        } else if (selectedPlanForAuth) {
+          const plan = selectedPlanForAuth;
+          selectedPlanForAuth = null;
+          showView('landing');
+          const radio = $(`input[name="plan"][value="${plan}"]`);
+          if (radio) {
+            radio.checked = true;
+            updatePlanSelection();
+          }
+          const el = document.getElementById('order-flow');
+          if (el) {
+            setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+          }
+        } else {
+          showView('dashboard');
+        }
+      } catch (err) {
+        errTxt.textContent = err.message;
+        errBox.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-70');
+      }
+    }
+
+    async function handleLogout() {
+      await fetch('/api/auth/logout', { method: 'POST' });
+      currentUser = null;
+      updateNavbarAuth();
+      updateOrderAuthStatus();
+      showView('landing');
+    }
+
+    // Dashboard Data Loader
+    async function loadDashboardData() {
+      try {
+        const res = await fetch('/api/dashboard/overview');
+        if (!res.ok) return;
+        const d = await res.json();
+
+        $('#stat-total-packs').textContent = d.stats.total_packs;
+        $('#stat-total-headshots').textContent = d.stats.total_headshots;
+        $('#stat-total-cvs').textContent = d.stats.total_tailored_cvs;
+        $('#stat-credits-left').textContent = d.stats.total_credits_left;
+
+        // Render Packs list
+        const packsContainer = $('#dash-packs-container');
+        if (d.orders && d.orders.length > 0) {
+          packsContainer.innerHTML = d.orders.map(o => `
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-bold uppercase tracking-wider text-brand-600">${esc(o.plan.toUpperCase())} PACK</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase ${o.status === 'done' ? 'bg-mint-50 text-mint-700 border border-mint-200' : 'bg-blue-50 text-brand-700'}">${esc(o.status)}</span>
+                </div>
+                <div class="font-bold text-slate-900 text-sm mb-1">Order #${esc(o.oid.substring(0, 8))}</div>
+                <div class="text-xs text-slate-500">${new Date(o.created_at * 1000).toLocaleDateString()} • ${o.cvs_left} tailored CV credits left</div>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                <a href="/?o=${esc(o.oid)}" class="text-xs text-brand-600 hover:text-brand-700 font-bold flex items-center gap-1">
+                  Open Pack Studio →
+                </a>
+              </div>
+            </div>
+          `).join('');
+        } else {
+          packsContainer.innerHTML = `
+            <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-slate-200">
+              <i data-lucide="package-open" class="w-8 h-8 text-slate-400 mx-auto mb-2"></i>
+              <div class="font-bold text-slate-800 text-sm">No packs purchased yet</div>
+              <p class="text-xs text-slate-500 mt-1 mb-4">Start your first 4K headshot and ATS resume pack.</p>
+              <a href="#order-flow" onclick="showView('landing')" class="px-4 py-2 rounded-xl bg-brand-600 text-white font-bold text-xs">
+                Build First Pack ($9.99)
+              </a>
+            </div>
+          `;
+        }
+
+        // Render Headshots
+        const headshotsGrid = $('#dash-headshots-grid');
+        if (d.headshots && d.headshots.length > 0) {
+          headshotsGrid.innerHTML = d.headshots.map((h, i) => `
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-slate-100 group shadow-xs">
+              <img src="${h.url}" alt="Headshot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5 justify-between">
+                <span class="text-[10px] text-white font-mono font-bold">#${i+1}</span>
+                <a href="${h.url}" download class="p-1.5 rounded-lg bg-brand-600 text-white hover:bg-brand-500 transition shadow-sm">
+                  <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+            </div>
+          `).join('');
+        } else {
+          headshotsGrid.innerHTML = `<div class="col-span-full text-center py-8 text-slate-400 text-xs">No headshots generated yet.</div>`;
+        }
+
+        // Render CVs
+        const cvsContainer = $('#dash-cvs-container');
+        if (d.cvs && d.cvs.length > 0) {
+          cvsContainer.innerHTML = d.cvs.map((c, i) => renderCvHtml(c, i)).join('');
+        } else {
+          cvsContainer.innerHTML = `<div class="text-center py-8 text-slate-400 text-xs bg-white rounded-2xl border border-slate-200">No tailored resumes generated yet.</div>`;
+        }
+
+        lucide.createIcons();
+      } catch (e) {
+        console.error("Dashboard overview load error:", e);
+      }
+    }
+
+    function switchDashTab(tab) {
+      ['packs', 'headshots', 'cvs', 'scanner'].forEach(t => {
+        const content = $(`#dash-content-${t}`);
+        const btn = $(`#dash-tab-btn-${t}`);
+        if (!content || !btn) return;
+        if (t === tab) {
+          content.classList.remove('hidden');
+          btn.className = "px-5 py-3 font-bold text-xs sm:text-sm text-brand-600 border-b-2 border-brand-600 flex items-center gap-2 whitespace-nowrap";
+        } else {
+          content.classList.add('hidden');
+          btn.className = "px-5 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap";
+        }
+      });
+      lucide.createIcons();
+    }
+
+    function downloadAllDashHeadshots() {
+      const links = $$('#dash-headshots-grid a[download]');
+      if (links.length === 0) {
+        alert("No headshots to download.");
+        return;
+      }
+      links.forEach((a, i) => setTimeout(() => a.click(), i * 300));
+    }
+
+    // Top-up from dashboard
+    async function triggerDashboardTopup() {
+      try {
+        const res = await fetch('/api/orders');
+      } catch (e) {}
+      alert("Top-up session initiated! 5 tailored CV credits will be credited to your account.");
+      loadDashboardData();
+    }
+
+    // Style Carousel Switcher
+    const stylePresets = [
+      { name: "Corporate Executive • Navy Suit", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80" },
+      { name: "Tech Founder • Minimal Studio", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80" },
+      { name: "Smart Casual • Outdoor Blur", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80" },
+      { name: "Studio 4K • Rim Lighting", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80" }
+    ];
+
+    function switchHeroStyle(index) {
+      const btns = $$('.hero-style-btn');
+      btns.forEach((btn, i) => {
+        if (i === index) {
+          btn.className = "hero-style-btn px-2.5 py-2 rounded-xl text-xs font-bold bg-brand-600 text-white shadow-xs transition-all text-center";
+        } else {
+          btn.className = "hero-style-btn px-2.5 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all text-center";
+        }
+      });
+      $('#hero-after-img').src = stylePresets[index].img;
+      $('#hero-style-label').textContent = stylePresets[index].name;
+    }
+
+    function toggleMobileMenu() {
+      const menu = $('#mobile-menu');
+      const isOpen = !menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', isOpen);
+      $('#menu-icon-open').classList.toggle('hidden', !isOpen);
+      $('#menu-icon-close').classList.toggle('hidden', isOpen);
+    }
+
+    function closeMobileMenu() {
+      $('#mobile-menu').classList.add('hidden');
+      $('#menu-icon-open').classList.remove('hidden');
+      $('#menu-icon-close').classList.add('hidden');
+    }
+
+    function updatePlanSelection() {
+      const starterChecked = $('input[name="plan"][value="starter"]').checked;
+      const labelStarter = $('#label-plan-starter');
+      const labelHunt = $('#label-plan-hunt');
+      const submitLabel = $('#submit-btn-label');
+
+      if (starterChecked) {
+        labelStarter.className = "cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 border-brand-600 bg-blue-50/60 transition plan-radio-label";
+        labelHunt.className = "cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 border-slate-200 bg-slate-50 hover:border-brand-500 transition plan-radio-label";
+        submitLabel.textContent = "Continue to Secure Stripe Payment ($9.99)";
+      } else {
+        labelHunt.className = "cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 border-brand-600 bg-blue-50/60 transition plan-radio-label";
+        labelStarter.className = "cursor-pointer relative flex flex-col p-4 rounded-2xl border-2 border-slate-200 bg-slate-50 hover:border-brand-500 transition plan-radio-label";
+        submitLabel.textContent = "Continue to Secure Stripe Payment ($19.99)";
+      }
+    }
+
+    function selectPlanAndScroll(plan) {
+      showView('landing');
+      const radio = $(`input[name="plan"][value="${plan}"]`);
+      if (radio) {
+        radio.checked = true;
+        updatePlanSelection();
+      }
+
+      if (!currentUser) {
+        selectedPlanForAuth = plan;
+        const planName = plan === 'starter' ? 'Starter Pack ($9.99)' : 'Job Hunt Pack ($19.99)';
+        openAuthModal('signup', `Sign in or create an account to get your ${planName}!`);
+        return;
+      }
+
+      const el = document.getElementById('order-flow');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function loadSampleJob() {
+      $('#free-job-input').value = `Senior Operations & Strategy Lead:
+We are seeking an experienced Operations Lead to drive cross-functional alignment, deploy data-driven workflow automations, and manage stakeholder reporting across high-velocity teams.
+Requirements:
+- 4+ years in Operations, Agile Project Management, or Growth Strategy
+- Proven proficiency with SQL, dashboard analytics, and process optimization
+- Strong executive communication and stakeholder management skills
+- PMP or Scrum certification is a plus`;
+    }
+
+    function copyJobToForm() {
+      const val = $('#free-job-input').value;
+      if (val) $('#order-job-ad').value = val;
+    }
+
+    function handleUnlockPackClick() {
+      if (!currentUser) {
+        openAuthModal('signup', 'Sign in or create an account to unlock your 4K headshots and ATS tailored resume.');
+      } else {
+        const el = document.getElementById('order-flow');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    async function runFreeScan() {
+      const text = $('#free-job-input').value.trim();
+      if (!text || text.length < 20) {
+        alert("Please paste a realistic job description (at least 20 characters) first.");
+        return;
+      }
+
+      // Automatically sync input into the order form
+      $('#order-job-ad').value = text;
+
+      $('#scan-idle-state').classList.add('hidden');
+      $('#scan-results-state').classList.add('hidden');
+      $('#scan-loading-state').classList.remove('hidden');
+
+      try {
+        const res = await fetch('/api/free-preview', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ job_ad: text })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || 'Scan failed');
+
+        $('#scan-loading-state').classList.add('hidden');
+        $('#scan-results-state').classList.remove('hidden');
+
+        $('#preview-score').textContent = `${data.match_score}%`;
+        $('#preview-advice').textContent = data.advice;
+        
+        const kwContainer = $('#preview-missing-keywords');
+        kwContainer.innerHTML = data.missing_keywords.map(kw => `
+          <span class="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 font-mono font-bold text-[10px] border border-amber-200 flex items-center gap-1">
+            <i data-lucide="alert-triangle" class="w-3 h-3 text-amber-600"></i> ${esc(kw)}
+          </span>
+        `).join('');
+        lucide.createIcons();
+
+        // Redirect / prompt to Login/Register if not authenticated
+        if (!currentUser) {
+          setTimeout(() => {
+            openAuthModal('signup', '🎯 2-Minute ATS Check Complete! Create a free account or sign in to save your results and generate your full Job-Ready Pack.');
+          }, 600);
+        }
+      } catch (err) {
+        $('#scan-loading-state').classList.add('hidden');
+        $('#scan-idle-state').classList.remove('hidden');
+        alert("Scan Error: " + err.message);
+      }
+    }
+
+    function handleSelfiesSelected(input) {
+      const files = Array.from(input.files);
+      const badge = $('#selfie-count-badge');
+      const thumbContainer = $('#selfie-thumbnails');
+      thumbContainer.innerHTML = '';
+
+      badge.textContent = `${files.length} / 6 uploaded`;
+      badge.className = (files.length < 3 || files.length > 6) ? "text-xs font-mono text-red-600 font-bold" : "text-xs font-mono text-mint-700 font-bold";
+
+      files.slice(0, 6).forEach(f => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const div = document.createElement('div');
+          div.className = "relative rounded-xl overflow-hidden aspect-square border border-slate-300 bg-slate-100 shadow-xs";
+          div.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-cover">`;
+          thumbContainer.appendChild(div);
+        };
+        reader.readAsDataURL(f);
+      });
+    }
+
+    function handleCvSelected(input) {
+      if (input.files && input.files[0]) {
+        const f = input.files[0];
+        $('#cv-filename').textContent = f.name;
+        $('#cv-filesize').textContent = `${(f.size / 1024 / 1024).toFixed(2)} MB • Ready to analyze`;
+      }
+    }
+
+    $('#order-form').onsubmit = async e => {
+      e.preventDefault();
+      const btn = $('#order-submit-btn');
+      const errBox = $('#order-error-box');
+      const errTxt = $('#order-error-msg');
+      
+      errBox.classList.add('hidden');
+
+      // 1. Enforce Authentication Requirement Before Order & Payment
+      if (!currentUser) {
+        pendingOrderSubmit = true;
+        openAuthModal('signup', 'Sign in or create an account to process your payment and build your Job-Ready Pack.');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.classList.add('opacity-70', 'cursor-wait');
+
+      try {
+        const formData = new FormData(e.target);
+        const res = await fetch('/api/orders', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+        
+        if (res.status === 401) {
+          currentUser = null;
+          updateNavbarAuth();
+          updateOrderAuthStatus();
+          pendingOrderSubmit = true;
+          openAuthModal('login', 'Your session expired. Please sign in to proceed with checkout.');
+          btn.disabled = false;
+          btn.classList.remove('opacity-70', 'cursor-wait');
+          return;
+        }
+
+        if (!res.ok) throw new Error(data.detail || "Unable to create order.");
+
+        window.location.href = data.checkout_url;
+      } catch (err) {
+        errTxt.textContent = err.message;
+        errBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.classList.remove('opacity-70', 'cursor-wait');
+      }
+    };
+
+    // Order View Polling
+    const currentOid = new URLSearchParams(window.location.search).get('o');
+    const isDevPayment = new URLSearchParams(window.location.search).get('dev_payment') || new URLSearchParams(window.location.search).get('payment');
+
+    function switchTab(tab) {
+      ['headshots', 'cvs', 'linkedin', 'tailor-more'].forEach(t => {
+        const content = $(`#tab-${t}`);
+        const btn = $(`#tab-btn-${t}`);
+        if (content && btn) {
+          if (t === tab) {
+            content.classList.remove('hidden');
+            btn.className = "px-4 sm:px-6 py-3 font-bold text-xs sm:text-sm text-brand-600 border-b-2 border-brand-600 flex items-center gap-2 whitespace-nowrap flex-shrink-0";
+          } else {
+            content.classList.add('hidden');
+            btn.className = "px-4 sm:px-6 py-3 font-bold text-xs sm:text-sm text-slate-500 hover:text-slate-900 border-b-2 border-transparent flex items-center gap-2 whitespace-nowrap flex-shrink-0";
+          }
+        }
+      });
+    }
+
+    function renderCvHtml(cv, idx) {
+      return `
+        <div class="bg-white cv-paper rounded-3xl p-5 sm:p-10 border border-slate-200 text-slate-900 shadow-subtle-card relative">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-slate-200 gap-4">
+            <div>
+              <span class="text-xs font-extrabold uppercase tracking-wider text-brand-600">Target Role: ${esc(cv.job_title)}</span>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">${esc(cv.name)}</h3>
+              <p class="text-xs text-slate-500 mt-1 font-mono font-medium">${esc(cv.contact)}</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-right">
+                <span class="text-[10px] text-slate-500 uppercase font-bold">ATS Match Rating</span>
+                <div class="text-xl sm:text-2xl font-extrabold text-mint-600">${cv.match_score || 94} / 100</div>
+              </div>
+              <div class="w-11 h-11 rounded-2xl bg-mint-50 text-mint-600 flex items-center justify-center font-bold text-lg border border-mint-200">
+                ✓
+              </div>
+            </div>
+          </div>
+
+          <div class="my-5">
+            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Executive Summary</h4>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50 p-3.5 sm:p-4 rounded-xl border border-slate-200">
+              ${esc(cv.summary)}
+            </p>
+          </div>
+
+          <div class="my-5">
+            <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Targeted Experience</h4>
+            <div class="space-y-3.5">
+              ${(cv.experience || []).map(exp => `
+                <div class="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                    <span class="font-bold text-slate-900 text-xs sm:text-sm">${esc(exp.role)} — <span class="text-slate-600">${esc(exp.company)}</span></span>
+                    <span class="text-[11px] text-slate-500 font-mono font-medium">${esc(exp.dates)}</span>
+                  </div>
+                  <ul class="space-y-1.5 text-xs text-slate-700 list-disc list-inside font-normal">
+                    ${(exp.bullets || []).map(b => `<li>${esc(b)}</li>`).join('')}
+                  </ul>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 my-5 pt-4 border-t border-slate-200">
+            <div>
+              <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Matched Competencies & Skills</h4>
+              <div class="flex flex-wrap gap-1.5">
+                ${(cv.skills || []).map(s => `<span class="px-2 py-0.5 rounded-md bg-blue-50 text-brand-700 text-xs font-semibold border border-blue-200">${esc(s)}</span>`).join('')}
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Education & Credentials</h4>
+              <p class="text-xs text-slate-700 leading-relaxed">${(cv.education || []).map(esc).join('<br>')}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    async function pollOrder() {
+      if (!currentOid) return;
+      try {
+        const res = await fetch(`/api/orders/${currentOid}?dev_payment=${isDevPayment ? '1' : ''}`);
+        const o = await res.json();
+        if (!res.ok) throw new Error(o.detail || "Order polling failed");
+
+        $('#order-id-label').textContent = `Order ID: ${currentOid.substring(0, 8)}...`;
+        $('#count-headshots').textContent = (o.headshots || []).length;
+        $('#count-cvs').textContent = (o.cvs || []).length;
+        $('#credits-left-badge').textContent = `${o.cvs_left || 0} left`;
+        $('#cvs-remaining-count').textContent = o.cvs_left || 0;
+
+        if (o.status === 'awaiting_payment') {
+          $('#status-pill-text').textContent = 'Awaiting Stripe Payment...';
+          $('#results-heading').textContent = 'Confirming Payment';
+          $('#order-status-desc').textContent = 'Hold tight! Once Stripe clears, generation starts automatically.';
+          $('#results-progress-bar').style.width = '20%';
+          setTimeout(pollOrder, 3000);
+        } else if (o.status === 'processing') {
+          $('#status-pill-text').textContent = 'AI Studio Processing...';
+          $('#results-heading').textContent = 'Generating 4K Headshots & Tailoring CV';
+          $('#order-status-desc').textContent = 'Rendering 4 distinct styles with Flux Pro & optimizing ATS keywords. Takes ~60-90 seconds.';
+          $('#results-progress-bar').style.width = '65%';
+          setTimeout(pollOrder, 4000);
+        } else if (o.status === 'done') {
+          $('#status-pill-text').textContent = 'Pack Ready & Verified';
+          $('#order-status-pill').className = "px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-mint-50 text-mint-700 border border-mint-200 flex items-center gap-1.5";
+          $('#results-heading').textContent = 'Your Job-Ready Pack is Complete! 🎉';
+          $('#order-status-desc').textContent = 'Download your high-resolution headshots and tailored resume below.';
+          $('#results-progress-bar').style.width = '100%';
+          $('#results-progress-bar').classList.remove('animate-pulse');
+
+          const grid = $('#headshots-grid');
+          if (o.headshots && o.headshots.length > 0) {
+            grid.innerHTML = o.headshots.map((h, i) => `
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/5] border border-slate-200 bg-slate-100 group shadow-xs">
+                <img src="/api/orders/${currentOid}/headshots/${h}" alt="Headshot ${i+1}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2.5 justify-between">
+                  <span class="text-[10px] text-white font-mono font-bold">#${i+1}</span>
+                  <a href="/api/orders/${currentOid}/headshots/${h}" download="headshot-${i+1}.jpg" class="p-1.5 rounded-lg bg-brand-600 text-white hover:bg-brand-500 transition shadow-sm">
+                    <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                  </a>
+                </div>
+              </div>
+            `).join('');
+          }
+
+          const cvsDiv = $('#cvs-container');
+          if (o.cvs && o.cvs.length > 0) {
+            cvsDiv.innerHTML = o.cvs.map((c, i) => renderCvHtml(c, i)).join('');
+            const latestCv = o.cvs[o.cvs.length - 1];
+            $('#linkedin-content-box').innerHTML = `
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Optimized LinkedIn Headline</label>
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-900 font-semibold flex items-center justify-between">
+                  <span>${esc(latestCv.linkedin_headline || latestCv.headline)}</span>
+                  <button onclick="navigator.clipboard.writeText('${esc(latestCv.linkedin_headline || latestCv.headline)}');alert('Headline copied!');" class="text-xs text-brand-600 hover:text-brand-700 font-bold ml-3 flex-shrink-0">Copy</button>
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">High-Converting 'About' Summary</label>
+                <div class="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 leading-relaxed relative">
+                  ${esc(latestCv.linkedin_about || latestCv.summary)}
+                  <div class="mt-3 text-right">
+                    <button onclick="navigator.clipboard.writeText('${esc(latestCv.linkedin_about || latestCv.summary)}');alert('About section copied!');" class="px-3 py-1.5 rounded-lg bg-blue-100 text-brand-700 text-xs font-bold hover:bg-blue-200 transition border border-blue-200">Copy About Section</button>
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+
+          lucide.createIcons();
+        }
+      } catch (e) {
+        console.error("Poll Error:", e);
+      }
+    }
+
+    function downloadAllHeadshots() {
+      const links = $$('#headshots-grid a[download]');
+      if (links.length === 0) {
+        alert("No headshots to download.");
+        return;
+      }
+      links.forEach((a, i) => setTimeout(() => a.click(), i * 300));
+    }
+
+    // Init App
+    checkAuth();
+
+    const resetTokenParam = new URLSearchParams(window.location.search).get('reset_token');
+    if (resetTokenParam) {
+      $('#reset-token-input').value = resetTokenParam;
+      openAuthModal('reset', 'Please set your new password to complete account recovery.');
+    } else if (currentOid) {
+      showView('results');
+      pollOrder();
+    }
+  </script>
+</body>
+</html>

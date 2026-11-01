@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+stripe
+openai
+anthropic
+fal-client
+httpx
+pyjwt
+email-validator
+pypdf
